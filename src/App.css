@@ -1,0 +1,238 @@
+@import './styles/overrides/overrides.css';
+@import './styles/themes/variables.css';
+
+/* =========================================
+   App Component Styles & Global Utilities
+=========================================== */
+
+/* Global animations and transitions */
+.modal-content {
+  animation: popIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.9) translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Global Card Wrapper - Ensures all content is in card format */
+.content-wrapper {
+  background: var(--card-glass);
+  border: 1px solid var(--card-border);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.content-wrapper:hover {
+  box-shadow: var(--shadow-lg);
+  /* transform: translateY(-2px); */
+}
+
+/* Page Container */
+.page-container {
+  min-height: 100vh;
+  background: var(--health-gradient);
+  padding: 2rem 1rem;
+}
+
+/* Section Containers */
+.section-container {
+  background: var(--card-glass);
+  border: 1px solid var(--card-border);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-container:hover {
+  box-shadow: var(--shadow-lg);
+  /* transform: translateY(-2px); */
+}
+
+/* Enhanced hover effects */
+.hover-scale:hover {
+  /* transform: scale(1.05); */
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  /* transform: translateY(-4px); */
+  transition: transform 0.3s ease;
+}
+
+.hover-shadow:hover {
+  /* transform: translateY(-1px); */
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Form focus states */
+input.form-control:focus,
+textarea.form-control:focus,
+select.form-select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  border-color: var(--color-input-focus);
+}
+
+/* Disabled states */
+.form-control:disabled,
+.form-select:disabled,
+.accordion-button:disabled {
+  pointer-events: none;
+  opacity: 0.6;
+  background-color: var(--color-surface-variant);
+}
+
+/* PrimeReact overrides for theme consistency */
+.p-tieredmenu .p-menuitem > .p-menuitem-content .p-menuitem-link {
+  text-decoration: none;
+}
+
+.p-button {
+  background: unset;
+  border: unset;
+  color: unset;
+}
+
+.p-menu .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text {
+  color: var(--color-text);
+  font-family: 'Poppins', sans-serif;
+}
+
+.p-tieredmenu.p-tieredmenu-overlay {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.p-toast-message {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.p-toast-message-text {
+  color: var(--color-text);
+}
+
+.custom-toast-content {
+  color: var(--color-text);
+  font-weight: 500;
+}
+/* App component styles */
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+.App-header {
+  background-color: var(--color-card-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--color-text);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.App-link {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.App-link:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pulse animation for health elements */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Fade in animation for auth pages */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-page-enter {
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Shimmer effect for loading states */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+.muted-label {
+  color: var(--color-muted) !important;
+}
+
+ol, ul {
+padding-left: 0 !important; 
+}

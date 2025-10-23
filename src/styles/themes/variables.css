@@ -1,0 +1,162 @@
+/* ===============================
+   Modern Bootstrap Theme Variables
+================================= */
+
+/* Light Theme (default) - Health Focused */
+:root {
+  /* Bootstrap 5.3+ CSS Variables - Health Theme */
+  --bs-primary: #28a745;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-danger: #dc3545;
+  --bs-warning: #ffc107;
+  --bs-info: #17a2b8;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  
+  /* Health-Focused Theme Variables */
+  --color-bg: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 50%, #e8f5e8 100%);
+  --color-bg-solid: #f0f8f0;
+  --color-text: #2d5016;
+  --color-primary: #28a745;
+  --color-secondary: #6c757d;
+  --color-success: #198754;
+  --color-danger: #dc3545;
+  --color-warning: #ffc107;
+  --color-info: #17a2b8;
+  --color-border: #c3e6c3;
+  --color-card-bg: rgba(255, 255, 255, 0.95);
+  --color-nav-bg: rgba(255, 255, 255, 0.98);
+  --color-muted: #6c757d;
+  --color-link: #28a745;
+  --color-link-hover: #218838;
+  --color-scrollbar: #a8d5a8;
+  --color-scrollbar-bg: #f0f8f0;
+  --color-shadow: rgba(40, 167, 69, 0.1);
+  --color-shadow-hover: rgba(40, 167, 69, 0.2);
+  --color-input-bg: rgba(255, 255, 255, 0.9);
+  --color-input-border: #c3e6c3;
+  --color-input-focus: #28a745;
+  --color-button-bg: #28a745;
+  --color-button-text: #ffffff;
+  --color-button-hover: #218838;
+  --color-button-secondary: #6c757d;
+  --color-button-secondary-hover: #5c636a;
+  
+  /* Modern UI Enhancements */
+  --color-surface: rgba(255, 255, 255, 0.95);
+  --color-surface-variant: rgba(248, 249, 250, 0.8);
+  --color-outline: #e9ecef;
+  --color-outline-variant: #c3e6c3;
+  --border-radius: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+  --shadow-sm: 0 0.125rem 0.25rem rgba(40, 167, 69, 0.1);
+  --shadow: 0 0.5rem 1rem rgba(40, 167, 69, 0.15);
+  --shadow-lg: 0 1rem 3rem rgba(40, 167, 69, 0.2);
+  
+  /* Health App Specific */
+  --health-gradient: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 25%, #e8f5e8 50%, #f0f8f0 75%, #e8f5e8 100%);
+  --card-glass: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(40, 167, 69, 0.2);
+}
+
+/* Dark Theme - Health Focused */
+body.dark {
+  /* Bootstrap 5.3+ CSS Variables for Dark Theme */
+  --bs-primary: #28a745;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-danger: #dc3545;
+  --bs-warning: #ffc107;
+  --bs-info: #17a2b8;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  
+  /* Health-Focused Dark Theme Variables */
+  --color-bg: linear-gradient(135deg, #0d1b0d 0%, #1a2e1a 50%, #0d1b0d 100%);
+  --color-bg-solid: #0d1b0d;
+  --color-text: #e8f5e8;
+  --color-primary: #4caf50;
+  --color-secondary: #8b949e;
+  --color-success: #4caf50;
+  --color-danger: #ef5350;
+  --color-warning: #ffb300;
+  --color-info: #29b6f6;
+  --color-border: #2d4a2d;
+  --color-card-bg: rgba(26, 46, 26, 0.95);
+  --color-nav-bg: rgba(13, 27, 13, 0.98);
+  --color-muted: #8b949e;
+  --color-link: #4caf50;
+  --color-link-hover: #66bb6a;
+  --color-scrollbar: #2d4a2d;
+  --color-scrollbar-bg: #0d1b0d;
+  --color-shadow: rgba(0, 0, 0, 0.4);
+  --color-shadow-hover: rgba(0, 0, 0, 0.6);
+  --color-input-bg: rgba(26, 46, 26, 0.9);
+  --color-input-border: #2d4a2d;
+  --color-input-focus: #4caf50;
+  --color-button-bg: #4caf50;
+  --color-button-text: #ffffff;
+  --color-button-hover: #66bb6a;
+  --color-button-secondary: #2d4a2d;
+  --color-button-secondary-hover: #3d5a3d;
+  
+  /* Modern UI Enhancements for Dark Theme */
+  --color-surface: rgba(26, 46, 26, 0.95);
+  --color-surface-variant: rgba(45, 74, 45, 0.8);
+  --color-outline: #2d4a2d;
+  --color-outline-variant: #3d5a3d;
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.4);
+  --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.6);
+  
+  /* Health App Specific - Dark */
+  --health-gradient: linear-gradient(135deg, #0d1b0d 0%, #1a2e1a 25%, #0d1b0d 50%, #1a2e1a 75%, #0d1b0d 100%);
+  --card-glass: rgba(26, 46, 26, 0.9);
+  --card-border: rgba(76, 175, 80, 0.3);
+}
+
+/* Additional utility classes for theme support */
+.theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Ensure smooth transitions for all theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Override any remaining Bootstrap classes that might interfere */
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.text-reset {
+  color: inherit !important;
+}
+
+/* Ensure proper contrast in both themes */
+body.dark .text-dark {
+  color: var(--color-text) !important;
+}
+
+body.dark .text-light {
+  color: var(--color-text) !important;
+}
+
+body.dark .text-white {
+  color: var(--color-text) !important;
+}
+
+body:not(.dark) .text-dark {
+  color: var(--color-text) !important;
+}
+
+body:not(.dark) .text-light {
+  color: var(--color-text) !important;
+}
+
+body:not(.dark) .text-white {
+  color: var(--color-text) !important;
+}

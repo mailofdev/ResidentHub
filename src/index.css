@@ -1,0 +1,134 @@
+/* =========================================
+   Global Theme Application & Font Setup
+=========================================== */
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Regular.ttf') format('woff2'),
+       url('./assets/fonts/Poppins-Regular.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  background: var(--health-gradient);
+  color: var(--color-text);
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--health-gradient);
+  color: var(--color-text);
+  transition: all 0.3s ease;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Apply theme to root div */
+#root {
+  background: var(--health-gradient);
+  color: var(--color-text);
+  min-height: 100vh;
+  position: relative;
+}
+
+/* =========================================
+   Component-Specific Styling
+=========================================== */
+
+/* Auth container styling */
+.auth-container {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.auth-container:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Auth router styling */
+.auth-router {
+  background-color: var(--color-bg);
+}
+
+/* Loading container styling */
+.loading-container {
+  background-color: var(--color-bg);
+}
+
+/* =========================================
+   Bootstrap Utility Overrides
+=========================================== */
+
+/* Background utilities */
+.bg-light { background-color: var(--color-surface-variant) !important; }
+.bg-white { background-color: var(--color-bg) !important; }
+.bg-dark { background-color: var(--color-nav-bg) !important; }
+
+/* Text utilities */
+.text-dark, .text-light, .text-white { color: var(--color-text) !important; }
+.text-muted { color: var(--color-muted) !important; }
+.text-primary { color: var(--color-primary) !important; }
+.text-secondary { color: var(--color-secondary) !important; }
+.text-success { color: var(--color-success) !important; }
+.text-danger { color: var(--color-danger) !important; }
+.text-warning { color: var(--color-warning) !important; }
+.text-info { color: var(--color-info) !important; }
+
+/* Border utilities */
+.border { border-color: var(--color-border) !important; }
+.border-top { border-top-color: var(--color-border) !important; }
+.border-bottom { border-bottom-color: var(--color-border) !important; }
+.border-start { border-left-color: var(--color-border) !important; }
+.border-end { border-right-color: var(--color-border) !important; }
+
+/* =========================================
+   Global Utilities & Base Styles
+=========================================== */
+
+/* Global box-sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure theme inheritance */
+div, span, p, h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+}
+
+/* Code styling */
+code {
+  font-family: 'Courier New', monospace;
+  background-color: var(--color-surface-variant);
+  color: var(--color-text);
+  padding: 0.2rem 0.4rem;
+  border-radius: var(--border-radius);
+  font-size: 0.875em;
+}
+
+/* Enhanced scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar);
+  border-radius: var(--border-radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
