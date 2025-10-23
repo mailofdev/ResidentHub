@@ -2,44 +2,44 @@
    Modern Bootstrap Theme Variables
 ================================= */
 
-/* Light Theme (default) - Health Focused */
+/* Light Theme (default) - ResidentHub Theme */
 :root {
-  /* Bootstrap 5.3+ CSS Variables - Health Theme */
-  --bs-primary: #28a745;
+  /* Bootstrap 5.3+ CSS Variables - ResidentHub Theme */
+  --bs-primary: #0d6efd;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-danger: #dc3545;
   --bs-warning: #ffc107;
-  --bs-info: #17a2b8;
+  --bs-info: #0dcaf0;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   
-  /* Health-Focused Theme Variables */
-  --color-bg: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 50%, #e8f5e8 100%);
-  --color-bg-solid: #f0f8f0;
-  --color-text: #2d5016;
-  --color-primary: #28a745;
+  /* ResidentHub Theme Variables */
+  --color-bg: linear-gradient(135deg, #e3f2fd 0%, #f0f8ff 50%, #e3f2fd 100%);
+  --color-bg-solid: #f0f8ff;
+  --color-text: #1a365d;
+  --color-primary: #0d6efd;
   --color-secondary: #6c757d;
   --color-success: #198754;
   --color-danger: #dc3545;
   --color-warning: #ffc107;
-  --color-info: #17a2b8;
-  --color-border: #c3e6c3;
+  --color-info: #0dcaf0;
+  --color-border: #b3d9ff;
   --color-card-bg: rgba(255, 255, 255, 0.95);
   --color-nav-bg: rgba(255, 255, 255, 0.98);
   --color-muted: #6c757d;
-  --color-link: #28a745;
-  --color-link-hover: #218838;
-  --color-scrollbar: #a8d5a8;
-  --color-scrollbar-bg: #f0f8f0;
-  --color-shadow: rgba(40, 167, 69, 0.1);
-  --color-shadow-hover: rgba(40, 167, 69, 0.2);
+  --color-link: #0d6efd;
+  --color-link-hover: #0b5ed7;
+  --color-scrollbar: #b3d9ff;
+  --color-scrollbar-bg: #f0f8ff;
+  --color-shadow: rgba(13, 110, 253, 0.1);
+  --color-shadow-hover: rgba(13, 110, 253, 0.2);
   --color-input-bg: rgba(255, 255, 255, 0.9);
-  --color-input-border: #c3e6c3;
-  --color-input-focus: #28a745;
-  --color-button-bg: #28a745;
+  --color-input-border: #b3d9ff;
+  --color-input-focus: #0d6efd;
+  --color-button-bg: #0d6efd;
   --color-button-text: #ffffff;
-  --color-button-hover: #218838;
+  --color-button-hover: #0b5ed7;
   --color-button-secondary: #6c757d;
   --color-button-secondary-hover: #5c636a;
   
@@ -55,52 +55,52 @@
   --shadow: 0 0.5rem 1rem rgba(40, 167, 69, 0.15);
   --shadow-lg: 0 1rem 3rem rgba(40, 167, 69, 0.2);
   
-  /* Health App Specific */
-  --health-gradient: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 25%, #e8f5e8 50%, #f0f8f0 75%, #e8f5e8 100%);
+  /* ResidentHub App Specific */
+  --residenthub-gradient: linear-gradient(135deg, #e3f2fd 0%, #f0f8ff 25%, #e3f2fd 50%, #f0f8ff 75%, #e3f2fd 100%);
   --card-glass: rgba(255, 255, 255, 0.9);
-  --card-border: rgba(40, 167, 69, 0.2);
+  --card-border: rgba(13, 110, 253, 0.2);
 }
 
-/* Dark Theme - Health Focused */
+/* Dark Theme - ResidentHub Focused */
 body.dark {
   /* Bootstrap 5.3+ CSS Variables for Dark Theme */
-  --bs-primary: #28a745;
+  --bs-primary: #0d6efd;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-danger: #dc3545;
   --bs-warning: #ffc107;
-  --bs-info: #17a2b8;
+  --bs-info: #0dcaf0;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   
-  /* Health-Focused Dark Theme Variables */
-  --color-bg: linear-gradient(135deg, #0d1b0d 0%, #1a2e1a 50%, #0d1b0d 100%);
-  --color-bg-solid: #0d1b0d;
-  --color-text: #e8f5e8;
-  --color-primary: #4caf50;
+  /* ResidentHub Dark Theme Variables */
+  --color-bg: linear-gradient(135deg, #0a1628 0%, #1a2332 50%, #0a1628 100%);
+  --color-bg-solid: #0a1628;
+  --color-text: #e3f2fd;
+  --color-primary: #4dabf7;
   --color-secondary: #8b949e;
-  --color-success: #4caf50;
-  --color-danger: #ef5350;
-  --color-warning: #ffb300;
-  --color-info: #29b6f6;
-  --color-border: #2d4a2d;
-  --color-card-bg: rgba(26, 46, 26, 0.95);
-  --color-nav-bg: rgba(13, 27, 13, 0.98);
+  --color-success: #51cf66;
+  --color-danger: #ff6b6b;
+  --color-warning: #ffd43b;
+  --color-info: #74c0fc;
+  --color-border: #2c3e50;
+  --color-card-bg: rgba(26, 35, 50, 0.95);
+  --color-nav-bg: rgba(10, 22, 40, 0.98);
   --color-muted: #8b949e;
-  --color-link: #4caf50;
-  --color-link-hover: #66bb6a;
-  --color-scrollbar: #2d4a2d;
-  --color-scrollbar-bg: #0d1b0d;
+  --color-link: #4dabf7;
+  --color-link-hover: #74c0fc;
+  --color-scrollbar: #2c3e50;
+  --color-scrollbar-bg: #0a1628;
   --color-shadow: rgba(0, 0, 0, 0.4);
   --color-shadow-hover: rgba(0, 0, 0, 0.6);
-  --color-input-bg: rgba(26, 46, 26, 0.9);
-  --color-input-border: #2d4a2d;
-  --color-input-focus: #4caf50;
-  --color-button-bg: #4caf50;
+  --color-input-bg: rgba(26, 35, 50, 0.9);
+  --color-input-border: #2c3e50;
+  --color-input-focus: #4dabf7;
+  --color-button-bg: #4dabf7;
   --color-button-text: #ffffff;
-  --color-button-hover: #66bb6a;
-  --color-button-secondary: #2d4a2d;
-  --color-button-secondary-hover: #3d5a3d;
+  --color-button-hover: #74c0fc;
+  --color-button-secondary: #2c3e50;
+  --color-button-secondary-hover: #3d4f63;
   
   /* Modern UI Enhancements for Dark Theme */
   --color-surface: rgba(26, 46, 26, 0.95);
@@ -111,10 +111,10 @@ body.dark {
   --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.6);
   
-  /* Health App Specific - Dark */
-  --health-gradient: linear-gradient(135deg, #0d1b0d 0%, #1a2e1a 25%, #0d1b0d 50%, #1a2e1a 75%, #0d1b0d 100%);
-  --card-glass: rgba(26, 46, 26, 0.9);
-  --card-border: rgba(76, 175, 80, 0.3);
+  /* ResidentHub App Specific - Dark */
+  --residenthub-gradient: linear-gradient(135deg, #0a1628 0%, #1a2332 25%, #0a1628 50%, #1a2332 75%, #0a1628 100%);
+  --card-glass: rgba(26, 35, 50, 0.9);
+  --card-border: rgba(77, 171, 247, 0.3);
 }
 
 /* Additional utility classes for theme support */

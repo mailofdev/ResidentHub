@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { registerServiceWorker } from "./utils/performance";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "primereact/resources/themes/lara-light-blue/theme.css"; 
 // import "primereact/resources/primereact.min.css";               
@@ -26,3 +27,6 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+// Register service worker for offline support
+registerServiceWorker();

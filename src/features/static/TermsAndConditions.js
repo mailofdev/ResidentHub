@@ -106,7 +106,7 @@ const TermsAndConditions = () => {
                     If you have any questions about these Terms and Conditions, please contact us at:
                   </p>
                   <div className="bg-light p-3 rounded">
-                    <p className="mb-1"><strong>Email:</strong> legal@levelgrit.com</p>
+                    <p className="mb-1"><strong>Email:</strong> legal@ResidentHub.com</p>
                     <p className="mb-1"><strong>Phone:</strong> +1 (555) 123-4567</p>
                     <p className="mb-0"><strong>Address:</strong> 123 Fitness Street, Health City, HC 12345</p>
                   </div>

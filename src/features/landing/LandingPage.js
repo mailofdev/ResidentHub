@@ -16,7 +16,7 @@ const LandingPage = () => {
       <nav className="navbar navbar-expand-lg navbar-light shadow-sm py-3 fixed-top theme-transition">
         <div className="container">
           <a className="navbar-brand fw-bold text-primary fs-3" href="#">
-            LevelGrit
+            ResidentHub
           </a>
           <button 
             className="navbar-toggler" 
@@ -382,7 +382,7 @@ const LandingPage = () => {
           <div className="row align-items-center">
             <div className="col-md-6">
               <div className="d-flex align-items-center">
-                <span className="fw-bold fs-4 me-4">LevelGrit</span>
+                <span className="fw-bold fs-4 me-4">ResidentHub</span>
                 <span className="text-muted">© 2025 All rights reserved.</span>
               </div>
             </div>

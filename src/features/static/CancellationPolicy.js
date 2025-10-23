@@ -147,7 +147,7 @@ const CancellationPolicy = () => {
                   </p>
                   
                   <div className="bg-light p-3 rounded">
-                    <p className="mb-1"><strong>Email:</strong> billing@levelgrit.com</p>
+                    <p className="mb-1"><strong>Email:</strong> billing@ResidentHub.com</p>
                     <p className="mb-1"><strong>Phone:</strong> +1 (555) 123-4567</p>
                     <p className="mb-1"><strong>Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM EST</p>
                     <p className="mb-0"><strong>Response Time:</strong> Within 24 hours</p>
@@ -173,7 +173,7 @@ const CancellationPolicy = () => {
                       If you're considering cancelling, we'd love to hear why. Your feedback helps us improve our platform.
                     </p>
                     <p className="text-muted mb-0">
-                      Contact us at <strong>feedback@levelgrit.com</strong> to share your thoughts.
+                      Contact us at <strong>feedback@ResidentHub.com</strong> to share your thoughts.
                     </p>
                   </div>
                 </div>

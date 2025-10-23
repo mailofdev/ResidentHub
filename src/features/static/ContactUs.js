@@ -215,9 +215,9 @@ const ContactUs = () => {
                           <i className="fas fa-envelope me-2"></i>Email Support
                         </h5>
                         <p className="text-muted mb-1">General Inquiries</p>
-                        <p className="text-muted mb-1">support@levelgrit.com</p>
+                        <p className="text-muted mb-1">support@ResidentHub.com</p>
                         <p className="text-muted mb-1">Technical Issues</p>
-                        <p className="text-muted mb-0">tech@levelgrit.com</p>
+                        <p className="text-muted mb-0">tech@ResidentHub.com</p>
                       </div>
 
                       <div className="mb-4">
