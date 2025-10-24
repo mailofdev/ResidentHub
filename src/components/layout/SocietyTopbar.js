@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { Navbar, Nav, Dropdown, Badge } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import LogoutButton from '../../features/societyCare/userManagement/LogoutButton';
+import ThemeToggle from '../display/ThemeToggle';
 
 const SocietyTopbar = ({
   showSearch = false,
@@ -82,6 +83,11 @@ const SocietyTopbar = ({
           </Nav>
 
           <Nav className="ms-auto">
+            {showThemeToggle && (
+              <Nav.Item className="d-flex align-items-center me-3">
+                <ThemeToggle size="sm" showLabel={false} />
+              </Nav.Item>
+            )}
             {showUserMenu && user && (
               <Dropdown align="end">
                 <Dropdown.Toggle 

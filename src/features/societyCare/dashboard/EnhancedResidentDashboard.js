@@ -248,18 +248,29 @@ const EnhancedResidentDashboard = () => {
             </Card.Header>
             <Card.Body>
               <Row>
-                <Col md={3}>
+                <Col md={2}>
                   <Button 
                     variant="primary" 
+                    className="w-100 mb-2"
+                    onClick={() => navigate('/maintenance')}
+                    disabled={isOffline}
+                  >
+                    <i className="bi bi-receipt me-2"></i>
+                    Maintenance
+                  </Button>
+                </Col>
+                <Col md={2}>
+                  <Button 
+                    variant="outline-primary" 
                     className="w-100 mb-2"
                     onClick={() => navigate('/payments')}
                     disabled={isOffline}
                   >
                     <i className="bi bi-credit-card me-2"></i>
-                    View Payments
+                    Payments
                   </Button>
                 </Col>
-                <Col md={3}>
+                <Col md={2}>
                   <Button 
                     variant="outline-primary" 
                     className="w-100 mb-2"
@@ -267,10 +278,10 @@ const EnhancedResidentDashboard = () => {
                     disabled={isOffline}
                   >
                     <i className="bi bi-chat-dots me-2"></i>
-                    Raise Complaint
+                    Complaints
                   </Button>
                 </Col>
-                <Col md={3}>
+                <Col md={2}>
                   <Button 
                     variant="outline-primary" 
                     className="w-100 mb-2"
@@ -278,10 +289,10 @@ const EnhancedResidentDashboard = () => {
                     disabled={isOffline}
                   >
                     <i className="bi bi-bell me-2"></i>
-                    View Notices
+                    Notices
                   </Button>
                 </Col>
-                <Col md={3}>
+                <Col md={2}>
                   <Button 
                     variant="outline-secondary" 
                     className="w-100 mb-2"
@@ -289,7 +300,18 @@ const EnhancedResidentDashboard = () => {
                     disabled={isOffline}
                   >
                     <i className="bi bi-person me-2"></i>
-                    My Profile
+                    Profile
+                  </Button>
+                </Col>
+                <Col md={2}>
+                  <Button 
+                    variant="outline-secondary" 
+                    className="w-100 mb-2"
+                    onClick={() => navigate('/settings')}
+                    disabled={isOffline}
+                  >
+                    <i className="bi bi-gear me-2"></i>
+                    Settings
                   </Button>
                 </Col>
               </Row>

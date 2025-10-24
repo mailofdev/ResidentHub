@@ -3,6 +3,7 @@ import layoutConfig from '../config/layout';
 import Sidebar from '../components/layout/Sidebar';
 import Topbar from '../components/layout/Topbar';
 import SocietyTopbar from '../components/layout/SocietyTopbar';
+import MobileNavigation from '../components/layout/MobileNavigation';
 import Footer from '../components/layout/Footer';
 import ThemeSwitch from '../components/display/ThemeSwitch';
 import OfflineIndicator from '../components/common/OfflineIndicator';
@@ -32,7 +33,7 @@ const MainLayout = ({ children, config }) => {
             showSearch={false} 
             showNavMenu={true} 
             showUserMenu={true} 
-            showThemeToggle={false} 
+            showThemeToggle={true} 
             showIcons={true}
           />
         ) : (
@@ -52,12 +53,15 @@ const MainLayout = ({ children, config }) => {
           {cfg.showSidebar && (
             <Sidebar showIcons={true} />
           )}
-          <main id="main-content" className={cfg.showSidebar ? "col-md-10 ms-sm-auto px-4" : "col-12 px-2"} tabIndex="-1">
+          <main id="main-content" className={`${cfg.showSidebar ? "col-md-10 ms-sm-auto px-4" : "col-12 px-2"} ${societyUser ? "pb-5 pb-md-0" : ""}`} tabIndex="-1">
             {children}
           </main>
         </div>
       </div>
       {cfg.showFooter && <Footer />}
+      
+      {/* Mobile Navigation - only show for authenticated users */}
+      {societyUser && <MobileNavigation />}
     </div>
   );
 };

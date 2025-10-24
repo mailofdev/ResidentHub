@@ -9,6 +9,8 @@ import paymentReducer from '../features/societyCare/payments/paymentSlice';
 import complaintReducer from '../features/societyCare/complaints/complaintSlice';
 import noticeReducer from '../features/societyCare/notices/noticeSlice';
 import residentReducer from '../features/societyCare/residents/residentSlice';
+import maintenanceReducer from '../features/societyCare/maintenance/maintenanceSlice';
+import settingsReducer from '../features/societyCare/settings/settingsSlice';
 
 const rootReducer = combineReducers({
   auth: authReducer,
@@ -21,6 +23,8 @@ const rootReducer = combineReducers({
   complaints: complaintReducer,
   notices: noticeReducer,
   residents: residentReducer,
+  maintenance: maintenanceReducer,
+  settings: settingsReducer,
 });
 
 export default rootReducer;

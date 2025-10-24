@@ -175,6 +175,81 @@ const AdminDashboard = () => {
         </Col>
       </Row>
 
+      {/* Quick Actions */}
+      <Row className="mb-4">
+        <Col>
+          <Card className="border-0 shadow-sm">
+            <Card.Header className="bg-primary text-white">
+              <h5 className="mb-0">Quick Actions</h5>
+            </Card.Header>
+            <Card.Body>
+              <Row>
+                <Col md={2}>
+                  <Button 
+                    variant="primary" 
+                    className="w-100 mb-2"
+                    onClick={() => window.location.href = '/maintenance'}
+                  >
+                    <i className="bi bi-receipt me-2"></i>
+                    Maintenance
+                  </Button>
+                </Col>
+                <Col md={2}>
+                  <Button 
+                    variant="outline-primary" 
+                    className="w-100 mb-2"
+                    onClick={() => window.location.href = '/user-management'}
+                  >
+                    <i className="bi bi-people me-2"></i>
+                    Residents
+                  </Button>
+                </Col>
+                <Col md={2}>
+                  <Button 
+                    variant="outline-primary" 
+                    className="w-100 mb-2"
+                    onClick={() => window.location.href = '/complaints'}
+                  >
+                    <i className="bi bi-chat-dots me-2"></i>
+                    Complaints
+                  </Button>
+                </Col>
+                <Col md={2}>
+                  <Button 
+                    variant="outline-primary" 
+                    className="w-100 mb-2"
+                    onClick={() => window.location.href = '/notices'}
+                  >
+                    <i className="bi bi-bell me-2"></i>
+                    Notices
+                  </Button>
+                </Col>
+                <Col md={2}>
+                  <Button 
+                    variant="outline-secondary" 
+                    className="w-100 mb-2"
+                    onClick={() => window.location.href = '/settings'}
+                  >
+                    <i className="bi bi-gear me-2"></i>
+                    Settings
+                  </Button>
+                </Col>
+                <Col md={2}>
+                  <Button 
+                    variant="outline-secondary" 
+                    className="w-100 mb-2"
+                    onClick={() => window.location.href = '/profile'}
+                  >
+                    <i className="bi bi-person me-2"></i>
+                    Profile
+                  </Button>
+                </Col>
+              </Row>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+
       <Row>
         {/* Recent Payments */}
         <Col lg={6} className="mb-4">

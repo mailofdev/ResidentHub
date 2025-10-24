@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import "./styles/themes/variables.css";
 import "./App.css";
@@ -7,6 +8,8 @@ import ProtectedRoute from "./components/navigation/ProtectedRoute";
 import ErrorBoundary from "./components/common/ErrorBoundary";
 import { ToastProvider } from "./contexts/ToastContext";
 import ToastDisplay from "./components/common/ToastProvider";
+import PWAInstallPrompt from "./components/common/PWAInstallPrompt";
+import { register, registerPWAInstallPrompt } from "./utils/serviceWorkerRegistration";
 
 import MainLayout from "./layouts/MainLayout";
 import NotFound from "./features/errors/NotFound";
@@ -40,6 +43,8 @@ import SocietyLandingPage from "./features/societyCare/landing/SocietyLandingPag
 import AuthInitializer from "./components/auth/AuthInitializer";
 import UserProfile from "./features/societyCare/userManagement/UserProfile";
 import UserManagement from "./features/societyCare/userManagement/UserManagement";
+import MaintenancePage from "./features/societyCare/maintenance/MaintenancePage";
+import SettingsPage from "./features/societyCare/settings/SettingsPage";
 // import createDemoUsers from "./utils/createDemoUsers"; // Uncomment to create demo users
 function ProtectedLayout({ children, config }) {
   return (
@@ -50,6 +55,20 @@ function ProtectedLayout({ children, config }) {
 }
 
 function App() {
+  // Register service worker and PWA install prompt
+  React.useEffect(() => {
+    register({
+      onSuccess: (registration) => {
+        console.log('SW registered: ', registration);
+      },
+      onUpdate: (registration) => {
+        console.log('SW updated: ', registration);
+      }
+    });
+    
+    registerPWAInstallPrompt();
+  }, []);
+
   return (
     <ErrorBoundary>
       <ThemeProvider>
@@ -131,6 +150,22 @@ function App() {
             element={
               <ProtectedLayout config={{ showTopbar: true, showSidebar: false, showFooter: false }}>
                 <UserManagement />
+              </ProtectedLayout>
+            }
+          />
+          <Route
+            path="/maintenance"
+            element={
+              <ProtectedLayout config={{ showTopbar: true, showSidebar: false, showFooter: false }}>
+                <MaintenancePage />
+              </ProtectedLayout>
+            }
+          />
+          <Route
+            path="/settings"
+            element={
+              <ProtectedLayout config={{ showTopbar: true, showSidebar: false, showFooter: false }}>
+                <SettingsPage />
               </ProtectedLayout>
             }
           />
@@ -224,6 +259,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
                 </Routes>
                 <ToastDisplay />
+                <PWAInstallPrompt />
               </AuthInitializer>
             </ToastProvider>
           </AuthProvider>
