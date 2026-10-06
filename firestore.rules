@@ -1,0 +1,72 @@
+rules_version = '2';
+
+/**
+ * Firebase Security Rules Strategy
+ * --------------------------------
+ * Frontend permission checks (RBAC / <Can> / route guards) are UX only.
+ * Always enforce authorization in Firestore and Storage rules.
+ *
+ * Recommended pattern:
+ * 1. Store user profiles in /users/{uid} with roleIds.
+ * 2. Store role definitions in /roles/{roleId} with permissions[].
+ * 3. Resolve permissions server-side via custom claims OR denormalized
+ *    permission arrays on the user document for simple apps.
+ * 4. Never trust client-provided role/permission fields on writes.
+ *
+ * For production SaaS, prefer Firebase Auth custom claims for roles
+ * and keep Firestore rules aligned with those claims.
+ */
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function userDoc() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+
+    function hasRole(roleId) {
+      return isSignedIn() && roleId in userDoc().roleIds;
+    }
+
+    // Example: treat a configurable superuser role id as elevated.
+    function isSuperuser() {
+      return hasRole('role_superuser');
+    }
+
+    match /users/{userId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn() && (isOwner(userId) || isSuperuser());
+      allow update: if isOwner(userId) || isSuperuser();
+      allow delete: if isSuperuser();
+    }
+
+    match /tasks/{taskId} {
+      allow read: if isSignedIn();
+      allow create, update: if isSignedIn();
+      allow delete: if isSignedIn() && (resource.data.assigneeId == request.auth.uid || isSuperuser());
+    }
+
+    match /notifications/{notificationId} {
+      allow read, update: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow create: if isSignedIn();
+    }
+
+    match /audit_logs/{logId} {
+      allow read: if isSuperuser();
+      allow create: if isSignedIn();
+      allow update, delete: if false;
+    }
+
+    match /roles/{roleId} {
+      allow read: if isSignedIn();
+      allow write: if isSuperuser();
+    }
+  }
+}
